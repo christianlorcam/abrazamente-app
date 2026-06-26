@@ -1,10 +1,14 @@
 package com.example.demo.service;
 
+import com.example.demo.model.Cliente;
+import com.example.demo.model.Producto;
 import com.example.demo.model.Professional;
 import com.example.demo.model.User;
 import com.example.demo.model.enums.Gender;
 import com.example.demo.model.enums.ProfessionalStatus;
 import com.example.demo.model.enums.UserStatus;
+import com.example.demo.repository.ClienteRepository;
+import com.example.demo.repository.ProductoRepository;
 import com.example.demo.repository.ProfessionalRepository;
 import com.example.demo.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -21,6 +25,8 @@ public class DatabaseSeeder implements CommandLineRunner {
 
     private final UserRepository userRepository;
     private final ProfessionalRepository professionalRepository;
+    private final ClienteRepository clienteRepository;
+    private final ProductoRepository productoRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -114,6 +120,50 @@ public class DatabaseSeeder implements CommandLineRunner {
             prof3.setFechaRegistro(LocalDateTime.now());
             prof3.setFechaActualizacion(LocalDateTime.now());
             professionalRepository.save(prof3);
+        }
+
+        if (clienteRepository.count() == 0) {
+            Cliente cliente1 = new Cliente();
+            cliente1.setNombre("Juan");
+            cliente1.setApellido("Pérez");
+            cliente1.setCorreo("juan.perez@example.com");
+            cliente1.setTelefono("+56911112222");
+            cliente1.setDireccion("Av. Providencia 1234, Santiago");
+            clienteRepository.save(cliente1);
+
+            Cliente cliente2 = new Cliente();
+            cliente2.setNombre("María");
+            cliente2.setApellido("González");
+            cliente2.setCorreo("maria.gonzalez@example.com");
+            cliente2.setTelefono("+56933334444");
+            cliente2.setDireccion("Calle El Roble 567, Concepción");
+            clienteRepository.save(cliente2);
+        }
+
+        if (productoRepository.count() == 0) {
+            Producto prod1 = new Producto();
+            prod1.setNombre("Guía de Meditación");
+            prod1.setDescripcion("Guía digital descargable en PDF");
+            prod1.setPrecio(4990.0);
+            prod1.setStock(100);
+            prod1.setCategoria("Libros");
+            productoRepository.save(prod1);
+
+            Producto prod2 = new Producto();
+            prod2.setNombre("Difusor de Aromaterapia");
+            prod2.setDescripcion("Difusor ultrasónico con luces LED");
+            prod2.setPrecio(24990.0);
+            prod2.setStock(15);
+            prod2.setCategoria("Bienestar");
+            productoRepository.save(prod2);
+
+            Producto prod3 = new Producto();
+            prod3.setNombre("Aceite Esencial de Lavanda");
+            prod3.setDescripcion("Aceite puro 10ml para relajación");
+            prod3.setPrecio(8990.0);
+            prod3.setStock(45);
+            prod3.setCategoria("Bienestar");
+            productoRepository.save(prod3);
         }
     }
 }
