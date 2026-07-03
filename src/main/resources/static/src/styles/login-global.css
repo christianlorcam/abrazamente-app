@@ -71,7 +71,7 @@ body{
 
     position: fixed;
 
-    background-image: url("/src/main/resources/static/src/assets/images/background-login-light.png");
+    background-image: url("../assets/images/background-login-light.png");
 
     background-size: cover;
 
@@ -89,8 +89,6 @@ body{
 }
 
 html[data-theme="dark"]{
-
-    background-image: url("/src/main/resources/static/src/assets/images/background-login-dark.png");
 
     --color-background:#0f172a;
 
@@ -299,5 +297,11 @@ img{
 button{
 
     font:inherit;
+
+}
+
+html[data-theme="dark"] body{
+
+    background-image: url("../assets/images/background-login-dark.png");
 
 }
