@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Activity, BookOpen, Calendar, Shield, Sparkles, X, ChevronRight } from 'lucide-react';
 import BreathingTimer from './features/breathing/BreathingTimer';
 import GroundingWizard from './features/grounding/GroundingWizard';
-// import MoodTracker from './features/journal/MoodTracker';
+import MoodTracker from './features/journal/MoodTracker';
 // import ProfessionalDirectory from './features/professionals/ProfessionalDirectory';
 
 export default function App() {
@@ -280,7 +280,7 @@ export default function App() {
               <div className="p-6 overflow-y-auto">
                 {activeModal === 'botiquin' && botiquinTab === 'breathing' && <BreathingTimer />}
                 {activeModal === 'botiquin' && botiquinTab === 'grounding' && <GroundingWizard />}
-                {activeModal === 'journal' && <div className="text-center py-12 text-gray-400 text-sm">El Diario Emocional se implementará en la siguiente fase (feature/mood-tracker).</div>}
+                {activeModal === 'journal' && <MoodTracker />}
                 {activeModal === 'professionals' && <div className="text-center py-12 text-gray-400 text-sm">El Directorio de Especialistas se implementará en la siguiente fase (feature/clinician-directory).</div>}
               </div>
 
