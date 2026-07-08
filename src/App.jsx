@@ -4,7 +4,7 @@ import { Heart, Activity, BookOpen, Calendar, Shield, Sparkles, X, ChevronRight 
 import BreathingTimer from './features/breathing/BreathingTimer';
 import GroundingWizard from './features/grounding/GroundingWizard';
 import MoodTracker from './features/journal/MoodTracker';
-// import ProfessionalDirectory from './features/professionals/ProfessionalDirectory';
+import ProfessionalDirectory from './features/professionals/ProfessionalDirectory';
 
 export default function App() {
   const [activeModal, setActiveModal] = useState(null); // 'botiquin', 'journal', 'professionals'
@@ -281,7 +281,7 @@ export default function App() {
                 {activeModal === 'botiquin' && botiquinTab === 'breathing' && <BreathingTimer />}
                 {activeModal === 'botiquin' && botiquinTab === 'grounding' && <GroundingWizard />}
                 {activeModal === 'journal' && <MoodTracker />}
-                {activeModal === 'professionals' && <div className="text-center py-12 text-gray-400 text-sm">El Directorio de Especialistas se implementará en la siguiente fase (feature/clinician-directory).</div>}
+                {activeModal === 'professionals' && <ProfessionalDirectory />}
               </div>
 
             </motion.div>
