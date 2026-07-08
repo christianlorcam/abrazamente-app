@@ -109,9 +109,9 @@ class GoogleAuthManager {
 
         this.nativeButtonContainer = document.getElementById("google-signin-native");
 
-        this.configUrl = "/auth/google/client-id";
+        this.configUrl = "http://localhost:8080/auth/google/client-id";
 
-        this.authUrl = "/auth/google";
+        this.authUrl = "http://localhost:8080/auth/google";
 
     }
 
@@ -304,10 +304,6 @@ class GoogleAuthManager {
     }
 
 }
-
-/* ==========================================================
-   INIT
-========================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
