@@ -21,6 +21,11 @@ public class PageController {
         return "forward:/public/terapia.html";
     }
 
+    @GetMapping("/comunidad")
+    public String comunidad() {
+        return "forward:/public/comunidad.html";
+    }
+
     @GetMapping("/login")
     public String login() {
         return "forward:/public/login.html";
