@@ -1078,7 +1078,7 @@ h1 {
 .stat-pill span { font-size: 0.78rem; color: var(--text-muted); }
 
 /* ---------- LAYOUT: FILTROS + GRID ---------- */
-.resources-body { max-width: 1280px; margin: 0 auto; padding: 0 4vw 100px 4vw; }
+.resources-body { max-width: 1280px; margin: 0 auto; padding: 5rem 4vw 100px 4vw; }
 
 .filters-toggle-btn {
   display: none;
