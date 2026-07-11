@@ -1,41 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Sparkles, Languages, Check, Calendar, Star, Filter } from 'lucide-react';
 
-const MOCK_PROFESSIONALS = [
-  {
-    id: 1,
-    nombre: 'Carolina',
-    apellido: 'Gómez',
-    descripcion: 'Psicóloga Clínica especialista en Ansiedad y Depresión.',
-    biografia: 'Más de 8 años ayudando a jóvenes y adultos a encontrar balance y paz mental a través de Terapia Cognitivo-Conductual.',
-    esVoluntario: true,
-    anosExperiencia: 8,
-    idiomas: 'Español, Inglés',
-    fotoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200'
-  },
-  {
-    id: 2,
-    nombre: 'Felipe',
-    apellido: 'Soto',
-    descripcion: 'Terapeuta especialista en Grounding y Estrés Laboral.',
-    biografia: 'Enfocado en mindfulness, reducción del estrés y técnicas de respiración consciente para el agotamiento profesional.',
-    esVoluntario: false,
-    anosExperiencia: 5,
-    idiomas: 'Español',
-    fotoUrl: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200&h=200'
-  },
-  {
-    id: 3,
-    nombre: 'Sofía',
-    apellido: 'Mendoza',
-    descripcion: 'Psiquiatra especialista en Bienestar Emocional Integral.',
-    biografia: 'Atención integradora con enfoque médico y terapéutico para trastornos del ánimo y crisis emocionales.',
-    esVoluntario: true,
-    anosExperiencia: 12,
-    idiomas: 'Español, Portugués',
-    fotoUrl: 'https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=200&h=200'
-  }
-];
+
 
 export default function ProfessionalDirectory() {
   const [professionals, setProfessionals] = useState([]);
@@ -53,17 +19,12 @@ export default function ProfessionalDirectory() {
       const response = await fetch('/api/professionals');
       if (response.ok) {
         const data = await response.json();
-        // If API returns empty list, fallback to mock list
-        if (data && data.length > 0) {
-          setProfessionals(data);
-        } else {
-          setProfessionals(MOCK_PROFESSIONALS);
-        }
+        setProfessionals(data || []);
       } else {
-        setProfessionals(MOCK_PROFESSIONALS);
+        setProfessionals([]);
       }
     } catch (err) {
-      setProfessionals(MOCK_PROFESSIONALS);
+      setProfessionals([]);
     }
   };
 
