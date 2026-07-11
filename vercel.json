@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://abrazamente-api.onrender.com/api/:path*"
+    },
+    {
+      "source": "/",
+      "destination": "/src/main/resources/static/public/index.html"
+    },
+    {
+      "source": "/(public|src)/(.*)",
+      "destination": "/src/main/resources/static/$1/$2"
+    },
+    {
+      "source": "/(.*\\.html)",
+      "destination": "/src/main/resources/static/public/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/src/main/resources/static/public/$1"
+    }
+  ]
+}
