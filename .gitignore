@@ -50,5 +50,10 @@ buildNumber.properties
 # Mac Os
 .DS_Store
 
-# Draw background
-/src/main/resources/static/src/assets/images/draw/
+#agents
+.agents/
+.claude/
+
+# Node
+node_modules/
+dist/

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients (Light Lavender to Pale Pink) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DCE2F8" />
+      <stop offset="100%" stop-color="#F5E1E7" />
+    </linearGradient>
+    
+    <!-- Decorative Glow Blobs -->
+    <radialGradient id="blobBlue" cx="15%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#A5B4FC" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#A5B4FC" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="blobPink" cx="85%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#FDA4AF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FDA4AF" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    
+    <!-- Brand / Tech Colors -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+
+    <!-- Translucent Dark Card Borders (Figma high-contrast look) -->
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    
+    <!-- Drop Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+  <rect width="1920" height="1080" fill="url(#blobBlue)" />
+  <rect width="1920" height="1080" fill="url(#blobPink)" />
+
+  <!-- Header -->
+  <g transform="translate(100, 100)">
+    <text x="0" y="40" font-family="Inter, sans-serif" font-size="48" font-weight="800" fill="url(#titleGrad)">Arquitectura de 3 Capas Desacopladas</text>
+    <text x="0" y="75" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#4B5563">Flujo e integración de datos entre el Frontend React y la Persistencia de Datos</text>
+  </g>
+
+  <!-- DIAGRAM AREA (Dark cards for high contrast) -->
+
+  <!-- 1. Capa Cliente (Left) -->
+  <g transform="translate(100, 260)">
+    <rect width="400" height="560" rx="20" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect width="400" height="70" rx="20" fill="url(#blueGrad)" />
+    <rect y="40" width="400" height="30" fill="url(#blueGrad)" />
+    
+    <text x="200" y="45" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">Capa Cliente</text>
+    <text x="200" y="110" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#9CA3AF" text-anchor="middle">React SPA (Vite)</text>
+    
+    <!-- Components -->
+    <g transform="translate(30, 150)">
+      <rect width="340" height="75" rx="10" fill="#1E293B" stroke="#2563EB" stroke-opacity="0.3" />
+      <text x="20" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Componentes React</text>
+      <text x="20" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Diario, Grounding, Reservas, Foro</text>
+
+      <g transform="translate(0, 110)">
+        <rect width="340" height="75" rx="10" fill="#1E293B" stroke="#2563EB" stroke-opacity="0.3" />
+        <text x="20" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Client API (Fetch)</text>
+        <text x="20" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Peticiones asíncronas a endpoints</text>
+      </g>
+
+      <g transform="translate(0, 220)">
+        <rect width="340" height="75" rx="10" fill="#1E293B" stroke="#2563EB" stroke-opacity="0.3" />
+        <text x="20" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Tailwind CSS Styles</text>
+        <text x="20" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Clases responsive y orbs interactivos</text>
+      </g>
+    </g>
+    
+    <rect x="30" y="475" width="340" height="50" rx="8" fill="#1E293B" fill-opacity="0.5" />
+    <text x="200" y="505" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#60A5FA" text-anchor="middle">Ejecución en Web / Navegador</text>
+  </g>
+
+  <!-- 2. Capa Servidor (Center) -->
+  <g transform="translate(760, 260)">
+    <rect width="400" height="560" rx="20" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect width="400" height="70" rx="20" fill="url(#greenGrad)" />
+    <rect y="40" width="400" height="30" fill="url(#greenGrad)" />
+    
+    <text x="200" y="45" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">Capa Servidor</text>
+    <text x="200" y="110" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#9CA3AF" text-anchor="middle">Spring Boot API</text>
+    
+    <!-- Components -->
+    <g transform="translate(30, 150)">
+      <rect width="340" height="75" rx="10" fill="#1E293B" stroke="#059669" stroke-opacity="0.3" />
+      <text x="20" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">REST Controllers</text>
+      <text x="20" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Endpoints /api/users, /api/auth, etc.</text>
+
+      <g transform="translate(0, 110)">
+        <rect width="340" height="75" rx="10" fill="#1E293B" stroke="#059669" stroke-opacity="0.3" />
+        <text x="20" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Servicios de Negocio</text>
+        <text x="20" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Lógica clínica, mapeos y auth</text>
+      </g>
+
+      <g transform="translate(0, 220)">
+        <rect width="340" height="75" rx="10" fill="#1E293B" stroke="#059669" stroke-opacity="0.3" />
+        <text x="20" y="32" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">JPA Persistencia</text>
+        <text x="20" y="55" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Mapeo a entidades con Hibernate</text>
+      </g>
+    </g>
+
+    <rect x="30" y="475" width="340" height="50" rx="8" fill="#1E293B" fill-opacity="0.5" />
+    <text x="200" y="505" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#34D399" text-anchor="middle">Servidor de Aplicaciones</text>
+  </g>
+
+  <!-- 3. Capa Datos (Right) -->
+  <g transform="translate(1420, 260)">
+    <rect width="400" height="560" rx="20" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect width="400" height="70" rx="20" fill="url(#purpleGrad)" />
+    <rect y="40" width="400" height="30" fill="url(#purpleGrad)" />
+    
+    <text x="200" y="45" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">Capa de Datos</text>
+    <text x="200" y="110" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#9CA3AF" text-anchor="middle">Persistencia Relacional</text>
+    
+    <!-- Components -->
+    <g transform="translate(30, 150)">
+      <rect width="340" height="180" rx="10" fill="#1E293B" stroke="#7C3AED" stroke-opacity="0.3" />
+      <text x="20" y="40" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">PostgreSQL (Neon)</text>
+      <text x="20" y="70" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#A78BFA">Base de Datos Cloud</text>
+      <text x="20" y="110" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Almacenamiento seguro en prod</text>
+      <text x="20" y="135" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Conexión JDBC sobre SSL</text>
+      
+      <g transform="translate(0, 205)">
+        <rect width="340" height="150" rx="10" fill="#1E293B" stroke="#7C3AED" stroke-opacity="0.3" />
+        <text x="20" y="40" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">H2 Database</text>
+        <text x="20" y="70" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#A78BFA">En memoria (Local/CI)</text>
+        <text x="20" y="100" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Rapidez en testing y dev</text>
+        <text x="20" y="125" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Aislamiento en GitHub Actions</text>
+      </g>
+    </g>
+    
+    <rect x="30" y="505" width="340" height="40" rx="8" fill="#1E293B" fill-opacity="0.5" />
+    <text x="200" y="530" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#A78BFA" text-anchor="middle">ACID Cumplimiento</text>
+  </g>
+
+  <!-- Connectors (Arrows) -->
+  
+  <!-- Client to Server Arrow -->
+  <g transform="translate(520, 500)">
+    <line x1="0" y1="0" x2="220" y2="0" stroke="#059669" stroke-width="4" stroke-dasharray="8 6" />
+    <polygon points="220,-8 236,0 220,8" fill="#059669" />
+    <rect x="15" y="-35" width="190" height="25" rx="4" fill="#0D1117" stroke="#374151" stroke-width="1" />
+    <text x="110" y="-18" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">HTTP / JSON REST Request</text>
+  </g>
+  
+  <!-- Server to Client Arrow (Back) -->
+  <g transform="translate(520, 560)">
+    <line x1="220" y1="0" x2="16" y2="0" stroke="#2563EB" stroke-width="4" />
+    <polygon points="16,-8 0,0 16,8" fill="#2563EB" />
+    <rect x="15" y="10" width="190" height="25" rx="4" fill="#0D1117" stroke="#374151" stroke-width="1" />
+    <text x="110" y="27" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">HTTP JSON Response</text>
+  </g>
+
+  <!-- Server to DB Arrow -->
+  <g transform="translate(1180, 500)">
+    <line x1="0" y1="0" x2="220" y2="0" stroke="#7C3AED" stroke-width="4" />
+    <polygon points="220,-8 236,0 220,8" fill="#7C3AED" />
+    <rect x="15" y="-35" width="190" height="25" rx="4" fill="#0D1117" stroke="#374151" stroke-width="1" />
+    <text x="110" y="-18" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">JDBC / JPA Connection</text>
+  </g>
+
+  <!-- DB to Server Arrow (Back) -->
+  <g transform="translate(1180, 560)">
+    <line x1="220" y1="0" x2="16" y2="0" stroke="#7C3AED" stroke-width="4" stroke-dasharray="8 6" />
+    <polygon points="16,-8 0,0 16,8" fill="#7C3AED" />
+    <rect x="15" y="10" width="190" height="25" rx="4" fill="#0D1117" stroke="#374151" stroke-width="1" />
+    <text x="110" y="27" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">ResultSet / Entities</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="1820" y="1000" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#4B5563" text-anchor="end">AbrazaMente · Presentación Técnica</text>
+</svg>

@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.ProfessionalResponseDTO;
-import com.example.demo.model.Professional;
 import com.example.demo.repository.ProfessionalRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
