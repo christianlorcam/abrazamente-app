@@ -6,8 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    outDir: 'src/main/resources/static',
-    emptyOutDir: true, // limpia el contenido previo de static al compilar
+    outDir: process.env.VERCEL ? 'dist' : 'src/main/resources/static',
+    emptyOutDir: true, // limpia el contenido previo al compilar
   },
   test: {
     environment: 'jsdom',
