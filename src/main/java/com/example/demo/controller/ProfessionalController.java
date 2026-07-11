@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.ProfessionalResponseDTO;
+import com.example.demo.model.Professional;
+import com.example.demo.model.enums.ProfessionalStatus;
 import com.example.demo.repository.ProfessionalRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,7 +23,7 @@ public class ProfessionalController {
 
     @GetMapping
     public List<ProfessionalResponseDTO> getAllProfessionals() {
-        return repository.findAll().stream()
+        return repository.findByEstado(ProfessionalStatus.ACTIVE).stream()
                 .map(p -> ProfessionalResponseDTO.builder()
                         .id(p.getId())
                         .nombre(p.getUser() != null ? p.getUser().getNombres() : "Profesional")
