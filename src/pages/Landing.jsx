@@ -23,7 +23,9 @@ const Landing = () => {
     const handleMouseEnter = (e) => {
       const orb = e.currentTarget;
       const emotionName = orb.dataset.emotion;
-      if (!emotionName) return;
+      if (!emotionName) {
+        return;
+      }
       
       const tooltip = document.createElement('div');
       tooltip.className = 'apple-tooltip';
@@ -43,7 +45,9 @@ const Landing = () => {
         orb._tooltip.classList.remove('visible');
         const tt = orb._tooltip; // Capturamos la referencia actual
         setTimeout(() => {
-          if(document.body.contains(tt)) tt.remove();
+          if (document.body.contains(tt)) {
+            tt.remove();
+          }
         }, 200);
         orb._tooltip = null;
       }

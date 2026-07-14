@@ -12,7 +12,7 @@
       ],
       "enabled": true,
       "environment": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "github_pat_11AOM3M5Q0qF8lVj9T2H4k_jR5w5W8k0d0L7w2b1w0G3j3y5g7t9H3g3d9j1F6a7k8d0"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
       }
     },
     "sequential-thinking": {

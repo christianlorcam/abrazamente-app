@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Pause, RotateCcw, Heart } from 'lucide-react';
+import { Play, Pause, RotateCcw } from 'lucide-react';
 
 const STAGES = [
   { text: 'Inhala profundamente', css: 'bg-emerald-500 shadow-emerald-500/50', label: 'INHALA', scale: 1.7, color: 'text-emerald-400' },
