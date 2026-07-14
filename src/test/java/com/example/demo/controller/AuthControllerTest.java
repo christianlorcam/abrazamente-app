@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.User;
+import com.example.demo.model.enums.Role;
 import com.example.demo.repository.UserRepository;
 import org.junit.jupiter.api.Test;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,6 +26,9 @@ class AuthControllerTest {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Test
     void shouldRegisterNewUser() throws Exception {
@@ -51,6 +56,14 @@ class AuthControllerTest {
 
     @Test
     void shouldLoginWithValidCredentials() throws Exception {
+        User user = new User();
+        user.setEmail("laura.montes@menteconecta.cl");
+        user.setPasswordHash(passwordEncoder.encode("password"));
+        user.setNombres("Laura");
+        user.setApellidos("Montes");
+        user.setRole(Role.ROLE_USER);
+        userRepository.save(user);
+
         mockMvc.perform(post("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"email\":\"laura.montes@menteconecta.cl\",\"password\":\"password\"}"))
