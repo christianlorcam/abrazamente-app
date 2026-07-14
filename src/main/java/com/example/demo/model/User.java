@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.example.demo.model.enums.Gender;
+import com.example.demo.model.enums.Role;
 import com.example.demo.model.enums.UserStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -64,6 +65,10 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserStatus estado = UserStatus.ACTIVE;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role = Role.ROLE_USER;
 
     @Column(name = "fecha_creacion", nullable = false, updatable = false)
     private LocalDateTime fechaCreacion = LocalDateTime.now();

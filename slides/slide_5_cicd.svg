@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients (Light Lavender to Pale Pink) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DCE2F8" />
+      <stop offset="100%" stop-color="#F5E1E7" />
+    </linearGradient>
+    
+    <!-- Decorative Glow Blobs -->
+    <radialGradient id="blobBlue" cx="15%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#A5B4FC" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#A5B4FC" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="blobPink" cx="85%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#FDA4AF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FDA4AF" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    
+    <!-- Brand / Tech Colors -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C" />
+      <stop offset="100%" stop-color="#C2410C" />
+    </linearGradient>
+
+    <!-- Translucent Dark Card Borders (Figma high-contrast look) -->
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    
+    <!-- Drop Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+  <rect width="1920" height="1080" fill="url(#blobTeal)" />
+  <rect width="1920" height="1080" fill="url(#blobPink)" />
+
+  <!-- Header -->
+  <g transform="translate(100, 100)">
+    <text x="0" y="40" font-family="Inter, sans-serif" font-size="48" font-weight="800" fill="url(#titleGrad)">DevOps: Integración y Calidad de Código</text>
+    <text x="0" y="75" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#4B5563">Flujo ágil y pruebas automatizadas en el repositorio fork para mantener el estándar clínico</text>
+  </g>
+
+  <!-- Horizontal Timeline (Light Background Style) -->
+  
+  <!-- Step line connector -->
+  <line x1="200" y1="480" x2="1720" y2="480" stroke="#D1D5DB" stroke-width="6" />
+  <line x1="200" y1="480" x2="1340" y2="480" stroke="#059669" stroke-width="6" stroke-dasharray="10 8" />
+
+  <!-- STEP 1: JIRA / DAILY -->
+  <g transform="translate(200, 480)">
+    <!-- Circle indicator -->
+    <circle cx="0" cy="0" r="24" fill="#0D1117" stroke="#2563EB" stroke-width="5" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+    
+    <!-- Top label -->
+    <text x="0" y="-120" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#0F172A" text-anchor="middle">Gestión Ágil</text>
+    <text x="0" y="-95" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle">Jira &amp; Sprints</text>
+    <path d="M0,-80 L0,-40" stroke="#2563EB" stroke-width="2" />
+    
+    <!-- Bottom Info Card -->
+    <g transform="translate(-160, 50)">
+      <rect width="320" height="230" rx="16" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1" filter="url(#cardShadow)" />
+      <text x="25" y="45" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Planificación</text>
+      <text x="25" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Sincronización diaria del equipo</text>
+      <text x="25" y="115" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Flujo Scrum bien definido</text>
+      <text x="25" y="145" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Estimaciones en Jira Board</text>
+      <text x="25" y="175" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Ricardo S.: Dev &amp; Q.A. / SM</text>
+    </g>
+  </g>
+
+  <!-- STEP 2: GIT BRANCHING -->
+  <g transform="translate(580, 480)">
+    <!-- Circle indicator -->
+    <circle cx="0" cy="0" r="24" fill="#0D1117" stroke="#059669" stroke-width="5" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">2</text>
+    
+    <!-- Top label -->
+    <text x="0" y="-120" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#0F172A" text-anchor="middle">Control Git</text>
+    <text x="0" y="-95" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#059669" text-anchor="middle">Ramas de Propósito</text>
+    <path d="M0,-80 L0,-40" stroke="#059669" stroke-width="2" />
+    
+    <!-- Bottom Info Card -->
+    <g transform="translate(-160, 50)">
+      <rect width="320" height="230" rx="16" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1" filter="url(#cardShadow)" />
+      <text x="25" y="45" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Modelo de Ramas</text>
+      <text x="25" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Ramas sin nombres personales</text>
+      <text x="25" y="115" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Naming: feature/, fix/, docs/</text>
+      <text x="25" y="145" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Trabajo aislado en el Fork</text>
+      <text x="25" y="175" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Integración limpia de React</text>
+    </g>
+  </g>
+
+  <!-- STEP 3: PULL REQUEST & REVIEW -->
+  <g transform="translate(960, 480)">
+    <!-- Circle indicator -->
+    <circle cx="0" cy="0" r="24" fill="#0D1117" stroke="#059669" stroke-width="5" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">3</text>
+    
+    <!-- Top label -->
+    <text x="0" y="-120" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#0F172A" text-anchor="middle">Pull Request</text>
+    <text x="0" y="-95" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#059669" text-anchor="middle">Revisión por Pares</text>
+    <path d="M0,-80 L0,-40" stroke="#059669" stroke-width="2" />
+    
+    <!-- Bottom Info Card -->
+    <g transform="translate(-160, 50)">
+      <rect width="320" height="230" rx="16" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1" filter="url(#cardShadow)" />
+      <text x="25" y="45" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Calidad de Código</text>
+      <text x="25" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Bloqueo de commits en main</text>
+      <text x="25" y="115" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Revisiones con Sourcery AI</text>
+      <text x="25" y="145" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Feedback constructivo en PRs</text>
+      <text x="25" y="175" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Fusión tras aprobaciones</text>
+    </g>
+  </g>
+
+  <!-- STEP 4: GITHUB ACTIONS CI -->
+  <g transform="translate(1340, 480)">
+    <!-- Circle indicator -->
+    <circle cx="0" cy="0" r="24" fill="#0D1117" stroke="#059669" stroke-width="5" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">4</text>
+    
+    <!-- Top label -->
+    <text x="0" y="-120" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#0F172A" text-anchor="middle">Pipeline CI</text>
+    <text x="0" y="-95" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#059669" text-anchor="middle">GitHub Actions</text>
+    <path d="M0,-80 L0,-40" stroke="#059669" stroke-width="2" />
+    
+    <!-- Bottom Info Card -->
+    <g transform="translate(-160, 50)">
+      <rect width="320" height="230" rx="16" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1" filter="url(#cardShadow)" />
+      <text x="25" y="45" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Automatización</text>
+      <text x="25" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Compilación automatizada Maven</text>
+      <text x="25" y="115" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Tests unitarios JUnit con H2</text>
+      <text x="25" y="145" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Análisis estático de seguridad CodeQL</text>
+      <text x="25" y="175" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Aprobación requerida para merge</text>
+    </g>
+  </g>
+
+  <!-- STEP 5: NEON DB & DELIVER -->
+  <g transform="translate(1720, 480)">
+    <!-- Circle indicator -->
+    <circle cx="0" cy="0" r="24" fill="#0D1117" stroke="#EA580C" stroke-width="5" />
+    <text x="0" y="6" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">5</text>
+    
+    <!-- Top label -->
+    <text x="0" y="-120" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#0F172A" text-anchor="middle">Entrega</text>
+    <text x="0" y="-95" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#EA580C" text-anchor="middle">Neon DB Branching</text>
+    <path d="M0,-80 L0,-40" stroke="#EA580C" stroke-width="2" />
+    
+    <!-- Bottom Info Card -->
+    <g transform="translate(-160, 50)">
+      <rect width="320" height="230" rx="16" fill="#0D1117" fill-opacity="0.95" stroke="url(#cardBorder)" stroke-width="1" filter="url(#cardShadow)" />
+      <text x="25" y="45" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Despliegue</text>
+      <text x="25" y="85" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Ramas aisladas de Neon DB</text>
+      <text x="25" y="115" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Base de datos Postgres serverless</text>
+      <text x="25" y="145" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Migraciones automáticas</text>
+      <text x="25" y="175" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">• Fusión e integración en la nube</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="1820" y="1000" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#4B5563" text-anchor="end">AbrazaMente · Presentación Técnica</text>
+</svg>

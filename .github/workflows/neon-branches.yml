@@ -23,12 +23,16 @@ jobs:
       || github.event.action == 'opened'
       || github.event.action == 'reopened')
     runs-on: ubuntu-latest
+    env:
+      NEON_API_KEY: ${{ secrets.NEON_API_KEY }}
     steps:
       - name: Get branch expiration date as an env variable (2 weeks from now)
         id: get_expiration_date
+        if: env.NEON_API_KEY != ''
         run: echo "EXPIRES_AT=$(date -u --date '+14 days' +'%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_ENV"
       - name: Create Neon Branch
         id: create_neon_branch
+        if: env.NEON_API_KEY != ''
         uses: neondatabase/create-branch-action@v6
         with:
           project_id: ${{ vars.NEON_PROJECT_ID }}
@@ -40,8 +44,11 @@ jobs:
     name: Delete Neon Branch
     if: github.event_name == 'pull_request_target' && github.event.action == 'closed'
     runs-on: ubuntu-latest
+    env:
+      NEON_API_KEY: ${{ secrets.NEON_API_KEY }}
     steps:
       - name: Delete Neon Branch
+        if: env.NEON_API_KEY != ''
         uses: neondatabase/delete-branch-action@v3
         with:
           project_id: ${{ vars.NEON_PROJECT_ID }}

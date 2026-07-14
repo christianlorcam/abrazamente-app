@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <radialGradient id="meshBlue" cx="15%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="meshTeal" cx="85%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="meshPurple" cx="85%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="50%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Glassmorphic Border Gradients -->
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    
+    <!-- Shadow Filter -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+  <rect width="1920" height="1080" fill="url(#meshPurple)" />
+  <rect width="1920" height="1080" fill="url(#meshTeal)" />
+
+  <!-- Header -->
+  <g transform="translate(100, 100)">
+    <text x="0" y="40" font-family="Inter, sans-serif" font-size="48" font-weight="800" fill="url(#titleGrad)">Base de Datos y Seguridad Clínica</text>
+    <text x="0" y="75" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#9CA3AF">Modelo relacional e infraestructura robusta diseñada bajo estándares éticos y de confidencialidad</text>
+  </g>
+
+  <!-- Content Boxes (2 Columns) -->
+  
+  <!-- LEFT COLUMN: DB MODEL -->
+  <g transform="translate(100, 240)">
+    <rect width="820" height="660" rx="24" fill="#131926" fill-opacity="0.6" stroke="url(#glassBorder)" stroke-width="1.5" filter="url(#cardShadow)" />
+    <path d="M 24,0 L 796,0 A 24,24 0 0,1 820,24 L 820,24 A 0,0 0 0,1 820,24 L 0,24 A 0,0 0 0,1 0,24 L 0,24 A 24,24 0 0,1 24,0 Z" fill="url(#purpleGrad)" />
+    
+    <text x="40" y="70" font-family="Inter, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">Modelo Relacional (Esquema de Tablas)</text>
+    <text x="40" y="98" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#A78BFA">Estructura normalizada en base a entidades clave de salud mental</text>
+    
+    <!-- Table list -->
+    <g transform="translate(40, 140)">
+      <!-- Box 1 -->
+      <rect width="350" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.2" />
+      <rect width="350" height="8" rx="4" fill="#3B82F6" />
+      <text x="20" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Usuarios y Perfiles</text>
+      <text x="20" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#E5E7EB">usuarios, roles, usuario_roles</text>
+      <text x="20" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Gestión de cuentas y control de accesos RBAC.</text>
+      
+      <!-- Box 2 -->
+      <g transform="translate(390, 0)">
+        <rect width="350" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.2" />
+        <rect width="350" height="8" rx="4" fill="#10B981" />
+        <text x="20" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Área Profesional</text>
+        <text x="20" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#E5E7EB">profesionales, especialidades</text>
+        <text x="20" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Catálogo de clínicos y asignación de licencias.</text>
+      </g>
+
+      <!-- Box 3 -->
+      <g transform="translate(0, 165)">
+        <rect width="350" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.2" />
+        <rect width="350" height="8" rx="4" fill="#8B5CF6" />
+        <text x="20" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Reserva &amp; Telemedicina</text>
+        <text x="20" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#E5E7EB">sesiones_medicas, disponibilidad</text>
+        <text x="20" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Reservas y videollamadas con consentimiento.</text>
+      </g>
+
+      <!-- Box 4 -->
+      <g transform="translate(390, 165)">
+        <rect width="350" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.2" />
+        <rect width="350" height="8" rx="4" fill="#F59E0B" />
+        <text x="20" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Diario de Autogestión</text>
+        <text x="20" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#E5E7EB">diario_emocional, emocion_dia</text>
+        <text x="20" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Registro privado de emociones y orbs.</text>
+      </g>
+
+      <!-- Box 5 -->
+      <g transform="translate(0, 330)">
+        <rect width="350" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.2" />
+        <rect width="350" height="8" rx="4" fill="#EC4899" />
+        <text x="20" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Comunidad y Foros</text>
+        <text x="20" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#E5E7EB">foros_tematicos, moderadores</text>
+        <text x="20" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Grupos de discusión clínica moderados.</text>
+      </g>
+
+      <!-- Box 6 -->
+      <g transform="translate(390, 330)">
+        <rect width="350" height="130" rx="12" fill="#1E293B" stroke="#8B5CF6" stroke-opacity="0.2" />
+        <rect width="350" height="8" rx="4" fill="#6B7280" />
+        <text x="20" y="35" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Auditoría y Pagos</text>
+        <text x="20" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#E5E7EB">bitacora_auditoria, pagos</text>
+        <text x="20" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="400" fill="#9CA3AF">Trazabilidad de acciones y transacciones.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: CLINICAL SECURITY -->
+  <g transform="translate(1000, 240)">
+    <rect width="820" height="660" rx="24" fill="#131926" fill-opacity="0.6" stroke="url(#glassBorder)" stroke-width="1.5" filter="url(#cardShadow)" />
+    <path d="M 24,0 L 796,0 A 24,24 0 0,1 820,24 L 820,24 A 0,0 0 0,1 820,24 L 0,24 A 0,0 0 0,1 0,24 L 0,24 A 24,24 0 0,1 24,0 Z" fill="url(#orangeGrad)" />
+    
+    <text x="40" y="70" font-family="Inter, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">Seguridad y Privacidad Clínica</text>
+    <text x="40" y="98" font-family="Inter, sans-serif" font-size="16" font-weight="500" fill="#F59E0B">Políticas de protección de datos de salud y regulaciones éticas</text>
+    
+    <!-- Guidelines list -->
+    <g transform="translate(40, 140)">
+      <!-- Point 1 -->
+      <g transform="translate(0, 0)">
+        <circle cx="30" cy="30" r="22" fill="#1E293B" />
+        <!-- Key Icon Path -->
+        <path d="M23,30 L27,34 L31,30 L37,36 L34,39" stroke="#F59E0B" stroke-width="2" fill="none" />
+        <circle cx="23" cy="27" r="4" stroke="#F59E0B" stroke-width="2" fill="none" />
+        <text x="70" y="24" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Cifrado de Datos Sensibles</text>
+        <text x="70" y="48" font-family="Inter, sans-serif" font-size="15" font-weight="400" fill="#9CA3AF">Cifrado a nivel de persistencia de diagnósticos preliminares y contraseñas mediante hash bcrypt.</text>
+      </g>
+
+      <!-- Point 2 -->
+      <g transform="translate(0, 110)">
+        <circle cx="30" cy="30" r="22" fill="#1E293B" />
+        <!-- Shield Icon Path -->
+        <path d="M20,20 L30,16 L40,20 L40,30 C40,36 30,42 30,42 C30,42 20,36 20,30 Z" stroke="#F59E0B" stroke-width="2" fill="none" />
+        <text x="70" y="24" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Control de Accesos Basado en Roles (RBAC)</text>
+        <text x="70" y="48" font-family="Inter, sans-serif" font-size="15" font-weight="400" fill="#9CA3AF">Uso de Spring Security. Un paciente no tiene acceso a notas clínicas de otros, y los profesionales requieren permisos explícitos.</text>
+      </g>
+
+      <!-- Point 3 -->
+      <g transform="translate(0, 220)">
+        <circle cx="30" cy="30" r="22" fill="#1E293B" />
+        <!-- Document/Search Icon -->
+        <rect x="22" y="20" width="16" height="20" rx="2" stroke="#F59E0B" stroke-width="2" fill="none" />
+        <line x1="26" y1="26" x2="34" y2="26" stroke="#F59E0B" stroke-width="2" />
+        <line x1="26" y1="32" x2="30" y2="32" stroke="#F59E0B" stroke-width="2" />
+        <text x="70" y="24" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Bitácora de Auditoría Clínica</text>
+        <text x="70" y="48" font-family="Inter, sans-serif" font-size="15" font-weight="400" fill="#9CA3AF">Registro inmutable en la tabla 'bitacora_auditoria' de cada inserción, edición o borrado de datos médicos (CREATE, UPDATE, DELETE).</text>
+      </g>
+
+      <!-- Point 4 -->
+      <g transform="translate(0, 330)">
+        <circle cx="30" cy="30" r="22" fill="#1E293B" />
+        <!-- Network/Link Icon -->
+        <path d="M22,30 A8,8 0 0,1 38,30" stroke="#F59E0B" stroke-width="2" fill="none" />
+        <circle cx="22" cy="30" r="3" fill="#F59E0B" />
+        <circle cx="38" cy="30" r="3" fill="#F59E0B" />
+        <text x="70" y="24" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Infraestructura Neon PostgreSQL con SSL</text>
+        <text x="70" y="48" font-family="Inter, sans-serif" font-size="15" font-weight="400" fill="#9CA3AF">Conexiones obligatorias sobre canales encriptados SSL en producción para evitar fugas o interceptaciones en tránsito.</text>
+      </g>
+    </g>
+
+    <!-- Visual Banner -->
+    <rect x="40" y="500" width="740" height="110" rx="16" fill="#1E293B" fill-opacity="0.4" stroke="#F59E0B" stroke-opacity="0.2" />
+    <text x="80" y="550" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Cumplimiento Ético-Clínico</text>
+    <text x="80" y="578" font-family="Inter, sans-serif" font-size="14" font-weight="400" fill="#9CA3AF">Diseñado para respetar la privacidad según estándares de resguardo clínico y almacenamiento seguro de fichas.</text>
+    <!-- Lock Icon -->
+    <rect x="680" y="530" width="30" height="24" rx="4" fill="none" stroke="#F59E0B" stroke-width="3" />
+    <path d="M687,530 L687,522 C687,516 695,516 695,522 L695,530" fill="none" stroke="#F59E0B" stroke-width="3" />
+  </g>
+
+  <!-- Footer -->
+  <text x="1820" y="1000" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#9CA3AF" text-anchor="end">AbrazaMente · Arquitectura</text>
+</svg>
