@@ -85,7 +85,6 @@ mental-app/
 │       ├── maven.yml             # CI de compilación y pruebas para Java
 │       ├── neon-branches.yml     # Gestión de ramas de base de datos Neon
 │       └── sourcery.yml          # Integración con Sourcery AI para PRs
-├── bruno/                        # Colecciones de pruebas de API con Bruno
 ├── database/
 │   └── database.sql              # Esquema SQL original de la base de datos
 ├── src/

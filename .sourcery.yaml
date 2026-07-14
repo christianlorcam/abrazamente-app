@@ -7,6 +7,4 @@ ignore:
   - ".agents"
   - ".git"
   - ".vscode"
-  - "slides"
-  - "bruno"
   - "database"
