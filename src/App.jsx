@@ -93,7 +93,9 @@ export default function App() {
 
   useEffect(() => {
     const saved = localStorage.getItem('user');
-    if (saved) setUser(JSON.parse(saved));
+    if (saved) {
+      setUser(JSON.parse(saved));
+    }
   }, []);
 
   const handleLogin = (data) => {

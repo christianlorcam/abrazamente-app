@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Smile, Frown, Meh, Laugh, AlertCircle, Save, Calendar, Globe, Lock, Users, Sparkles } from 'lucide-react';
+import { AlertCircle, Save, Calendar, Lock, Users, Sparkles } from 'lucide-react';
 
 const MOODS = [
   { emoji: '😢', name: 'Triste', color: 'bg-blue-500/20 text-blue-400 border-blue-500/30' },
@@ -34,6 +34,7 @@ export default function MoodTracker() {
         throw new Error('API unavailable or unauthorized');
       }
     } catch (err) {
+      console.warn('Using offline fallback for journal entries:', err);
       // Fallback to localStorage if API fails or offline
       setIsOfflineMode(true);
       const local = localStorage.getItem('mental-app-journal');
@@ -92,6 +93,7 @@ export default function MoodTracker() {
           throw new Error('POST failed');
         }
       } catch (err) {
+        console.warn('Failed to save journal entry to API, using local storage:', err);
         // Fallback to local save if API request fails
         setIsOfflineMode(true);
         const updated = [newEntry, ...entries];

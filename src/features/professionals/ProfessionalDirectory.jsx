@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Sparkles, Languages, Check, Calendar, Star, Filter } from 'lucide-react';
+import { Search, Languages, Check, Calendar, Star } from 'lucide-react';
 
 
 
@@ -24,6 +24,7 @@ export default function ProfessionalDirectory() {
         setProfessionals([]);
       }
     } catch (err) {
+      console.error('Error fetching professionals:', err);
       setProfessionals([]);
     }
   };
@@ -180,43 +181,42 @@ export default function ProfessionalDirectory() {
       {bookingProfessional && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md p-4">
           <div className="bg-gray-900 border border-white/10 rounded-2xl w-full max-w-sm p-6 text-center shadow-2xl relative">
-            {!bookingSuccess ? (
-              <>
-                <Calendar className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h4 className="text-lg font-bold text-white mb-2">Reservar Sesión</h4>
-                <p className="text-xs text-gray-400 mb-6">
-                  ¿Deseas agendar una sesión de orientación inicial con{' '}
-                  <span className="text-white font-semibold">
-                    {bookingProfessional.nombre} {bookingProfessional.apellido}
-                  </span>
-                  ?
-                </p>
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setBookingProfessional(null)}
-                    className="flex-1 py-2.5 rounded-xl border border-white/10 bg-white/5 text-gray-400 text-xs font-semibold cursor-pointer hover:bg-white/10 transition-all"
-                  >
-                    Cancelar
-                  </button>
-                  <button
-                    onClick={confirmBooking}
-                    className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-semibold cursor-pointer hover:bg-blue-500 transition-all"
-                  >
-                    Confirmar
-                  </button>
-                </div>
-              </>
-            ) : (
-              <div className="py-4">
-                <div className="w-12 h-12 bg-emerald-500/20 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 mx-auto mb-4">
-                  <Check className="w-6 h-6" />
-                </div>
-                <h4 className="text-base font-bold text-white mb-1">¡Reserva Solicitada!</h4>
-                <p className="text-xs text-gray-400">
-                  Hemos notificado a {bookingProfessional.nombre}. Recibirás un enlace de videollamada por correo.
-                </p>
-              </div>
-            )}
+            {bookingSuccess ? 
+                           <div className="py-4">
+                             <div className="w-12 h-12 bg-emerald-500/20 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 mx-auto mb-4">
+                               <Check className="w-6 h-6" />
+                             </div>
+                             <h4 className="text-base font-bold text-white mb-1">¡Reserva Solicitada!</h4>
+                             <p className="text-xs text-gray-400">
+                               Hemos notificado a {bookingProfessional.nombre}. Recibirás un enlace de videollamada por correo.
+                             </p>
+                           </div>
+                          : 
+                           <>
+                             <Calendar className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                             <h4 className="text-lg font-bold text-white mb-2">Reservar Sesión</h4>
+                             <p className="text-xs text-gray-400 mb-6">
+                               ¿Deseas agendar una sesión de orientación inicial con{' '}
+                               <span className="text-white font-semibold">
+                                 {bookingProfessional.nombre} {bookingProfessional.apellido}
+                               </span>
+                               ?
+                             </p>
+                             <div className="flex gap-3">
+                               <button
+                                 onClick={() => setBookingProfessional(null)}
+                                 className="flex-1 py-2.5 rounded-xl border border-white/10 bg-white/5 text-gray-400 text-xs font-semibold cursor-pointer hover:bg-white/10 transition-all"
+                               >
+                                 Cancelar
+                               </button>
+                               <button
+                                 onClick={confirmBooking}
+                                 className="flex-1 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-semibold cursor-pointer hover:bg-blue-500 transition-all"
+                               >
+                                 Confirmar
+                               </button>
+                             </div>
+                           </>}
           </div>
         </div>
       )}

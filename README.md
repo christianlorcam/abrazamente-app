@@ -73,6 +73,11 @@ graph TD
 - **Gestión Clínica:** Repositorio seguro para que profesionales registrados descarguen pautas y material clínico.
 - **Directorio Clasificado:** Buscador y filtros avanzados de psicólogos, coaches y terapeutas de apoyo.
 
+### 4. Diario Emocional (Mood Tracker)
+- **Registro de Emociones:** Permite registrar diariamente el estado de ánimo (Triste, Neutral, Bien, Feliz, Estresado) junto con anotaciones de texto reflexivo.
+- **Soporte Offline:** Guarda las entradas localmente en `localStorage` si el servidor no está disponible o el usuario está sin conexión, sincronizándose cuando se reestablece.
+- **Privacidad Configurable:** Permite definir la visibilidad del registro en tres niveles: Privado, Compartido con profesionales o Público para la comunidad.
+
 ---
 
 ## 📂 Estructura del Directorio
@@ -85,7 +90,6 @@ mental-app/
 │       ├── maven.yml             # CI de compilación y pruebas para Java
 │       ├── neon-branches.yml     # Gestión de ramas de base de datos Neon
 │       └── sourcery.yml          # Integración con Sourcery AI para PRs
-├── bruno/                        # Colecciones de pruebas de API con Bruno
 ├── database/
 │   └── database.sql              # Esquema SQL original de la base de datos
 ├── src/
